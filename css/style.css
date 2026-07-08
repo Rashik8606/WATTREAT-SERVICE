@@ -18,36 +18,30 @@
 .clients-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:30px;
-    align-items:center;
+    gap:25px;
 }
-
 .client-logo{
-    background:var(--white);
-    border-radius:var(--radius-md);
-    box-shadow:var(--shadow-md);
-    padding:30px;
+    height:120px;              /* Same height for every logo */
+    background:#fff;
+    border-radius:12px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    transition:var(--transition-normal);
-    min-height:140px;
+    align-items:center;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 .client-logo img{
-    max-width:140px;
-    max-height:70px;
-    width:auto;
-    height:auto;
-    object-fit:contain;
-    filter:grayscale(100%);
-    opacity:.8;
-    transition:var(--transition-normal);
+    width:160px;               /* Same maximum width */
+    height:70px;               /* Same maximum height */
+    object-fit:contain;        /* Prevent stretching */
+    filter:none;
+    opacity:1;
+    transition:transform .3s ease;
 }
 
-.client-logo:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow-hover);
+.client-logo:hover img{
+    transform:scale(1.05);
 }
 
 .client-logo:hover img{
