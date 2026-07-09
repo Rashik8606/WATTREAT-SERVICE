@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Simple regex checks
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^[0-9\s\+\-\(\)]{8,20}$/;
+      const phoneRegex = /^[6-9]\d{9}$/;
 
       if (!name || !projectType || !emailRegex.test(email) || !phoneRegex.test(phone)) {
         formError.style.display = 'block';
